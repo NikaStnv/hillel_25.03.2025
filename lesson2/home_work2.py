@@ -9,3 +9,4 @@ numb_5 = int(transform_int - (numb_1 * 10000  + numb_2 * 1000 + numb_3 * 100 + n
 print(numb_5 , numb_4 , numb_3 , numb_2 , numb_1)
 
 
+
