@@ -1,7 +1,6 @@
-lst = []
-element_end = lst[-1] if len(lst) != 0 else ""
+lst = [1]
 if len(lst) != 0:
-    lst.pop(-1) and lst.insert(0, element_end)
+    lst.insert(0, lst.pop(-1))
     print(lst)
 else:
     print(lst)
