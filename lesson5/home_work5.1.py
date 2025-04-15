@@ -11,8 +11,7 @@ for a in my_lst:
         result = "False3"
     if keyword.iskeyword(a) and len(my_lst) < 2:
         result = "False4"
-else:
-    print(result)
+print(result)
 
 
 
