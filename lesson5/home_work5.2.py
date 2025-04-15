@@ -16,5 +16,5 @@ while agree == "так":
             print("Помилка - на 0 ділити не можна!")
     operation_2 = input("Бажаєте продавжити? ")
     if operation_2 != "так":
-        agree = agree.replace("так", "ні")
+        agree = "ні"
 print("Гарного дня!")
