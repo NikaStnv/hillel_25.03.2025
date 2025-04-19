@@ -2,8 +2,6 @@ user_data = input("Enter numbers: ")
 numbers = []
 for x in user_data:
     numbers.append(int(x))
-while 1 in  numbers[1:]:
-    numbers.remove(1)
 dct = { y : x for y, x  in enumerate(numbers,1)}
 multiplication = 1
 a = 1
