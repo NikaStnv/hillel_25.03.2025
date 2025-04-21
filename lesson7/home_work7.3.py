@@ -1,7 +1,7 @@
 txt_1 = input("Enter a text: ")
 txt_2 = input("2-nd index of which text element to find?  ")
 
-def second_index(text: str, some_str: str) -> int:
+def second_index(text: str, some_str: str) -> int | None:
     if text.count(some_str) < 2:
         return None
     else:
