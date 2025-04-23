@@ -1,9 +1,8 @@
 def is_palindrome(text: str) -> bool:
-    text = text.lower()
     text_alnum = ""
     for x in text:
         if x.isalnum():
-            text_alnum += x
+            text_alnum += x.lower()
     return True if text_alnum == text_alnum[::-1] else False
 
 assert is_palindrome('A man, a plan, a canal: Panama') == True, 'Test1'
