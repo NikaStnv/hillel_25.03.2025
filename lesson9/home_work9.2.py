@@ -1,4 +1,4 @@
-def difference(*args: int | float | None) -> int | float:
+def difference(*args) -> int | float:
     if not args:
         return 0
     else:
