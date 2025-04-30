@@ -6,12 +6,13 @@ def some_gen(begin, end, func):
     end: кількість елементів у послідовності
     func: функція, яка формує значення для послідовності
     """
-    lst = [begin]
+    element = begin
     count = 0
-    while len(lst) <= end:
-        lst.append(func(lst[-1]))
-        yield lst[count]
+    while count < end:
+        yield element
+        element = func(element)
         count += 1
+
 
 
 from inspect import isgenerator
