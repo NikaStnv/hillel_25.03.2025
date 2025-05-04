@@ -1,7 +1,7 @@
 def is_even(number: int) -> bool:
     """ Перевірка чи є парним число без застосування /, //, % та divmod
-    param digit: Число для перевірки на парність
-    type digit: int
+    param number: Число для перевірки на парність
+    type number: int
     return: True якщо число парне, False якщо непарне
     return type: bool
     """
