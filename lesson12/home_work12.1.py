@@ -1,5 +1,4 @@
-def linear_search(arr, target):
-    if arr in target:
-        return arr.index(target)
-    else:
-        return -1
+def print_array(arr):
+    return ",".join(str(x) for x in arr)
+
+print(print_array([2, 4, 5, 2]))
