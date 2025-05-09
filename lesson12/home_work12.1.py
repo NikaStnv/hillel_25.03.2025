@@ -1,14 +1,15 @@
 import re
 
+
 def edit_file(file_path):
     """ Очищення тексту від html-тегів та порожні рядки"""
-
     with open(file_path, "r", encoding="utf-8") as file:
         content = file.read()
         edit1_content = re.sub(r'<[^>]+>', '', content)
-        edit2_content = [line for line in edit1_content.splitlines()  if line.strip() != ""]
+        edit2_content = [line for line in edit1_content.splitlines() if line.strip() != ""]
 
-    with open(file_path, "w", encoding="utf-8") as file:
+    cleaned_file = "cleaned.txt"
+    with open(cleaned_file, "w", encoding="utf-8") as file:
         file.write("\n".join(edit2_content))
     return True
 
