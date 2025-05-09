@@ -30,20 +30,22 @@ class Purchase:
         self.total = 0
 
     def add_item(self, item, cnt):
-        self.products[item] = [cnt, cnt * item.price]
+        self.products[item] = cnt
 
     def __str__(self):
         result = [f"Чек клієнта:\n{self.user}"]
         for item, value in self.products.items():
-            result.append(f"{item} {value[0]} {item.measurement} * {item.price}$ = {value[1]}$ ")
+            result.append(f"{item} {self.products[item]} {item.measurement} * {item.price}$ = "
+                          f"{self.products[item] * item.price}$")
         return "\n".join(result)
 
     def get_total(self):
         self.total = 0
         for item, value in self.products.items():
-            self.total += item.price * value[0]
+            self.total += item.price * self.products[item]
         if self.user.discount > 0:
             self.total -= round(self.total * self.user.discount / 100, 2)
+        # print(f"Тип: {type(self.total)}, Значение: {self.total}")
         return self.total
 
 
@@ -66,6 +68,7 @@ cart.add_item(lemon, 4)
 cart.add_item(apple, 20)
 print(cart)
 print(cart.get_total())
+
 cart.add_item(apple, 10)
 print(cart)
 print(cart.get_total())
@@ -83,6 +86,7 @@ cart_3.add_item(banana, 20)
 cart_3.add_item(apple, 30)
 print(cart_3)
 print(cart_3.get_total())
+
 """
 User: Ivan Ivanov
 Items:
