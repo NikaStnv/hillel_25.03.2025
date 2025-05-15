@@ -7,7 +7,7 @@ class Counter:
         max_value (int): Максимально дозволене значення
     """
 
-    def __init__(self, current=1, min_value=0, max_value=10):
+    def __init__(self, current: int = 1, min_value: int = 0, max_value: int = 10) -> None:
         """ Ініціалізація лічильника.
             Аргументи:
             current (int): Початкове значення (за замовчуванням: 1)
@@ -20,39 +20,39 @@ class Counter:
         self.min_value = min_value
         self.max_value = max_value
 
-    def set_current(self, start):
+    def set_current(self, start: int) -> None:
         """ Встановлення початкового значення лічильника.
             Аргументи:
             current (int): Початкове значення
         """
         self.current = start
 
-    def set_max(self, max_max):
+    def set_max(self, max_max: int) -> None:
         """ Встановлення максимального значення лічильника.
             Аргументи:
             max_max (int): максимальне значення
         """
         self.max_value = max_max
 
-    def set_min(self, min_min):
+    def set_min(self, min_min: int) -> None:
         """ Встановлення мінімального значення лічильника.
             Аргументи:
             min_min (int): мінімальне значення
         """
         self.min_value = min_min
 
-    def step_up(self):
-       """
-       Збільшує поточний показник лічильника на 1
-       Викликає:
-       ValueError: Якщо поточне значення лічильника вже дорівнює маскимальному значенню
-       """
-       if self.current < self.max_value:
+    def step_up(self) -> None:
+        """
+        Збільшує поточний показник лічильника на 1
+        Викликає:
+        ValueError: Якщо поточне значення лічильника вже дорівнює маскимальному значенню
+        """
+        if self.current < self.max_value:
            self.current += 1
-       else:
+        else:
            raise ValueError("Достигнут максимум")
 
-    def step_down(self):
+    def step_down(self) -> None:
        """
        Зменшує поточний показник лічильника на 1
        Викликає:
@@ -63,7 +63,7 @@ class Counter:
        else:
            raise ValueError("Достигнут минимум")
 
-    def get_current(self):
+    def get_current(self) -> int:
        """ Повертає поточне значення лічильника """
        return self.current
 

@@ -1,7 +1,7 @@
 class Human:
     """ Клас для представлення людини """
 
-    def __init__(self, gender, age, first_name, last_name):
+    def __init__(self, gender: str, age: int, first_name: str, last_name: str) -> None:
         """
         Ініціалізація екземпляру класу Human.
         Аргументи:
@@ -15,7 +15,7 @@ class Human:
         self.first_name = first_name
         self.last_name = last_name
 
-    def __str__(self):
+    def __str__(self) -> str:
         """ Повертає рядкове представлення людини """
         return f"{self.first_name} {self.last_name} ({self.gender}, {self.age})"
 
@@ -23,7 +23,7 @@ class Human:
 class Student(Human):
     """ Клас для представлення студента, успадковується від Human """
 
-    def __init__(self, gender, age, first_name, last_name, record_book):
+    def __init__(self, gender: str, age: int, first_name: str, last_name: str, record_book: str) -> None:
         """
         Ініціалізація екземпляру класу Student.
         Аргументи:
@@ -36,7 +36,7 @@ class Student(Human):
         super().__init__(gender, age, first_name, last_name)
         self.record_book = record_book
 
-    def __str__(self):
+    def __str__(self) -> str:
         """ Повертає рядкове представлення студента """
         return f"{self.first_name} {self.last_name} ({self.gender}, {self.age} age, {self.record_book})"
 
@@ -44,7 +44,7 @@ class Student(Human):
 class Group:
     """ Клас для представлення групи студентів """
 
-    def __init__(self, number):
+    def __init__(self, number: int) -> None:
         """
         Ініціалізація екземпляру класу Group.
         Аргументи:
@@ -53,7 +53,7 @@ class Group:
         self.number = number
         self.group = set()
 
-    def add_student(self, student):
+    def add_student(self, student: str) -> None:
         """
         Додає студента до групи.
         Аргументи:
@@ -61,7 +61,7 @@ class Group:
         """
         self.group.add(student)
 
-    def delete_student(self, last_name):
+    def delete_student(self, last_name: str) -> None:
         """
         Видалення студента за прізвищем.
         Аргументи:
@@ -69,7 +69,7 @@ class Group:
         """
         self.group = set(student for student in self.group if student.last_name != last_name)
 
-    def find_student(self, last_name):
+    def find_student(self, last_name: str) -> str | None:
         """
         Пошук студента за прізвищем.
         Аргументи:
@@ -80,7 +80,7 @@ class Group:
                 return student
         return None
 
-    def __str__(self):
+    def __str__(self) -> str:
         """ Повертає рядкове представлення всіх студентів группи """
         all_students = "\n".join(str(student) for student in self.group)
         return f'Number:{self.number}\n{all_students}'
