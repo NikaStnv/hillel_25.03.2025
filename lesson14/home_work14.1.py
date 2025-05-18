@@ -115,7 +115,7 @@ gr.add_student(st7)
 gr.add_student(st8)
 gr.add_student(st9)
 gr.add_student(st10)
-gr.add_student(st11)
+# gr.add_student(st11)
 
 print(gr)
 
