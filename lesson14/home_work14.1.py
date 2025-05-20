@@ -53,7 +53,7 @@ class Group:
         self.number = number
         self.group = set()
 
-    def add_student(self, student: str) -> None:
+    def add_student(self, student) -> None:
         """
         Додає студента до групи.
         Аргументи:
@@ -65,6 +65,7 @@ class Group:
             self.group.add(student)
         else:
             raise ValueError("Досягнуто максимальної кількості студентів у групі")
+
 
     def delete_student(self, last_name: str) -> None:
         """
@@ -103,19 +104,13 @@ st9 = Student("Male", 19, "John", "Abrams", "AN121")
 st10 = Student("Male", 22, "Mike", "Tison", "AN128")
 st11 = Student("Female", 22, "Olivia", "Anderson", "AN129")
 
-gr = Group('PD1')
+students_list = [st1, st2, st3, st4, st5, st6, st7, st8, st9, st10, st11]
+gr_pd1 = Group('PD1')
 
-gr.add_student(st1)
-gr.add_student(st2)
-gr.add_student(st3)
-gr.add_student(st4)
-gr.add_student(st5)
-gr.add_student(st6)
-gr.add_student(st7)
-gr.add_student(st8)
-gr.add_student(st9)
-gr.add_student(st10)
-# gr.add_student(st11)
+for st in students_list:
+    try:
+        gr_pd1.add_student(st)
+    except ValueError as e:
+        print(e)
 
-print(gr)
-
+print(gr_pd1)
