@@ -53,7 +53,7 @@ class Group:
         self.number = number
         self.group = set()
 
-    def add_student(self, student: str) -> None:
+    def add_student(self, student) -> None:
         """
         Додає студента до групи.
         Аргументи:

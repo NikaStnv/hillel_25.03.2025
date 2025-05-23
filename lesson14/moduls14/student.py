@@ -1,4 +1,4 @@
-from .class_human import Human
+from .human import Human
 
 
 class Student(Human):

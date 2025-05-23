@@ -64,7 +64,7 @@ class Group:
         if len(self.group) < 10:
             self.group.add(student)
         else:
-            raise ValueError("Досягнуто максимальної кількості студентів у групі")
+            raise ValueError("Досягнуто максимальної кількості студентів у групі.")
 
 
     def delete_student(self, last_name: str) -> None:

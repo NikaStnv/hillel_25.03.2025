@@ -1,5 +1,5 @@
-from moduls14.class_student import Student
-from moduls14.class_group import Group
+from moduls14.student import Student
+from moduls14.group import Group
 
 
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
